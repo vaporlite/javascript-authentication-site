@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@keyframes scaleIn {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    font-family: 'Poppins';
+}
+
+html, body {
+    background-color: #050505;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    animation: scaleIn 0.7s ease;
+}
+
+.container-top-text {
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.key-discord-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    margin: 2.7rem 0 0;
+    gap: 1.3rem;
+    width: 100%;
+}
+
+#key-input {
+    width: 25rem;
+    height: 2.4rem;
+    padding: 1.3rem .7rem;
+    border-radius: 0.65rem;
+    background-color: #121212;
+    color: #fff;
+    font-size: .85rem;
+    font-weight: normal;
+    border: none;
+    outline: none;
+}
+
+.key-text-p, .discord-text-p {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 2500;
+    margin-bottom: 0.2rem;
+    align-self: flex-start;
+}
+
+.verify-btn {
+    width: 100%;
+    height: 2.4rem;
+    padding: 1.3rem;
+    border-radius: 0.65rem;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: .85rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    margin-top: 1.5rem;
+}
+
+.verify-btn:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 0 14px rgba(255, 255, 255, .5);
+}
+
+.verify-btn:active {
+    transform: translateY(0px);
+    box-shadow: 0 0 7px rgba(255, 255, 255, .5);
+}
+
+.verify-container p {
+    color: rgb(255, 255, 255, .5);
+    font-size: 0.8rem;
+    font-weight: 250;
+    margin-bottom: 0.2rem;
+    align-self: flex-start;
+    text-align: center;
+    margin-top: .35rem;
+}
+
+.verify-container a {
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 250;
+    margin-bottom: 0.2rem;
+    align-self: flex-start;
+    text-align: center;
+    text-decoration: none;
+}
