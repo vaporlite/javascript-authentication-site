@@ -48,17 +48,15 @@ document.addEventListener('DOMContentLoaded', () => {
     
     (async () => {
         const result = await validator.validateKey(pendingKey);
-        setTimeout(() => {
-            if (result.valid) {
-                localStorage.setItem('validatedKey', pendingKey);
-                localStorage.setItem('accessToken', result.accessToken);
-                window.location.href = '/allowed';
-            } else {
-                sessionStorage.setItem('validationError', result.error || 'Invalid key');
-                window.location.href = '/denied';
-            }
-    
-            sessionStorage.removeItem('pendingKey');
-        }, 3000);
+        if (result.valid) {
+            localStorage.setItem('validatedKey', pendingKey);
+            localStorage.setItem('accessToken', result.accessToken);
+            window.location.href = '/allowed';
+        } else {
+            sessionStorage.setItem('validationError', result.error || 'Invalid key');
+            window.location.href = '/denied';
+        }
+
+        sessionStorage.removeItem('pendingKey');
     })();
 })
